@@ -32,7 +32,7 @@ unsigned int convert_s(va_list args, buffer_t *output, unsigned char flags, int 
     for (size = 0; *(string + size);)
         size++;
 
-    retrn += print_string_width(output, flags, wid, prec, size);
+    retrn += string_width_printer(output, flags, wid, prec, size);
 
     prec = (prec == -1) ? size : prec;
     while (*string != '\0' && prec > 0)
@@ -42,7 +42,7 @@ unsigned int convert_s(va_list args, buffer_t *output, unsigned char flags, int 
         string++;
     }
 
-    retrn += print_neg_width(output, retrn, flags, wid);
+    retrn += neg_width_printer(output, retrn, flags, wid);
 
     return (retrn);
 }
@@ -72,7 +72,7 @@ unsigned int convert_S(va_list args, buffer_t *output, unsigned char flags, int 
     for (size = 0; str[size];)
         size++;
 
-    retrn += print_string_width(output, flags, wid, prec, size);
+    retrn += string_width_printer(output, flags, wid, prec, size);
 
     prec = (prec == -1) ? size : prec;
     for (i = 0; *(string + i) != '\0' && i < prec; i++)
@@ -88,7 +88,7 @@ unsigned int convert_S(va_list args, buffer_t *output, unsigned char flags, int 
         retrn += _memcpy(output, (string + i), 1);
     }
 
-    retrn += print_neg_width(output, retrn, flags, wid);
+    retrn += neg_width_printer(output, retrn, flags, wid);
 
     return (retrn);
 }

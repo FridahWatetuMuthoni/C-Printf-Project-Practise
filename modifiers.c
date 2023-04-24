@@ -7,7 +7,7 @@ unsigned int neg_width_printer(buffer_t *output, unsigned int printed, unsigned 
 /**
  * width_printer - Stores leading spaces to buffer for the width modifier.
  * @output: A buffer_t struct that contains a character array.
- * @printed: The current number of characters already printed
+ * @printed: The current number of characters already printed.
  * @flags: Flag modifiers.
  * @wid:width modifier.
  *

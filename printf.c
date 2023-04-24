@@ -37,7 +37,7 @@ int runing_printf(const char *format, va_list args, buffer_t *output)
         if (*(format + i) == '%')
         {
             temp = 0;
-            flags = flag_handler(format + i + 1, &temp);
+            flags = flags_handler(format + i + 1, &temp);
             wild = width_handler(args, format + i + temp + 1, &temp);
             precision = precision_handler(args, format + i + temp + 1, &temp);
             length = length_handler(format + i + temp + 1, &temp);
@@ -76,7 +76,7 @@ int _printf(const char *format, ...)
 
     if (format == NULL)
         return (-1);
-    output = init_buffer();
+    output = initialize_buffer();
     if (output == NULL)
         return (-1);
 

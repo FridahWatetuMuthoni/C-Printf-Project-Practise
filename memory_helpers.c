@@ -2,7 +2,7 @@
 
 unsigned int _memcpy(buffer_t *output, const char *src, unsigned int n);
 void free_buffer(buffer_t *output);
-buffer_t *init_buffer(void);
+buffer_t *initialize_buffer(void);
 
 /**
  * _memcpy-copies n bytes from memory area src to the buffer
@@ -50,7 +50,7 @@ void free_buffer(buffer_t *output)
  *
  * Return: A pointer to the initialized buffer_t.
  */
-buffer_t *initialise_buffer(void)
+buffer_t *initialize_buffer(void)
 {
     buffer_t *output;
 

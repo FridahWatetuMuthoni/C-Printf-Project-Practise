@@ -154,7 +154,7 @@ int precision_handler(va_list args, const char *modifier, char *i)
 
 /**
  * specifiers_handler - Matches a conversion specifier with conversion function.
- * @specifier: A pointer to a potential conversion specifier.
+ * @specifier: A pointer to a potential conversion specifier
  *
  * Return: return a pointer to the function else NULL.
  */

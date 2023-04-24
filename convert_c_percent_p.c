@@ -67,7 +67,7 @@ unsigned int convert_percent(va_list args, buffer_t *output, unsigned char flags
  * @wid: A width modifier.
  * @prec: A precision modifier.
  * @len: A length modifier.
- * @output: A buffer_t struct containing a character array.
+ * @output: A buffer_t struct containing a character array..
  *
  * Return: The number of bytes stored to the buffer.
  */

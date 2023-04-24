@@ -6,7 +6,7 @@ unsigned int convert_u(va_list args, buffer_t *output, unsigned char flags, int 
 unsigned int convert_o(va_list args, buffer_t *output, unsigned char flags, int wid, int prec, unsigned char len);
 
 /**
- * convert_di - Converts an argument to a signed int
+ * convert_di - Converts an argument to a signed int.
  * @args: A va_list pointing to the argument to be converted.
  * @flags: Flag modifiers.
  * @wid: A width modifier.
@@ -69,7 +69,7 @@ unsigned int convert_di(va_list args, buffer_t *output, unsigned char flags, int
     if (!(digit == 0 && prec == 0))
         retrn += convert_sbase(output, d, "0123456789", flags, 0, prec);
 
-    retrn += print_neg_width(output, retrn, flags, wid);
+    retrn += neg_width_printer(output, retrn, flags, wid);
 
     return (retrn);
 }
@@ -126,7 +126,7 @@ unsigned int convert_o(va_list args, buffer_t *output, unsigned char flags, int 
     if (!(num == 0 && prec == 0))
         retrn += convert_ubase(output, num, "01234567", flags, wid, prec);
 
-    retrn += print_neg_width(output, retrn, flags, wid);
+    retrn += neg_width_printer(output, retrn, flags, wid);
 
     return (retrn);
 }
